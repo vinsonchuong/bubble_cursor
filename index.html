@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Bubble Cursor</title>
+        <link href="style.css" rel="stylesheet" media="screen">
+        <script type="text/javascript" src="raphael.js"></script>
+        <script type="text/javascript" src="geometry.js"></script>
+        <script type="text/javascript" src="search_tree.js"></script>
+        <script type="text/javascript" src="bubble_cursor.js"></script>
+    </head>
+    <body>
+        <div id="canvasContainer"></div>
+        <script type="text/javascript">
+            var
+                start,
+                dataPoint = {misses:0},
+                data = [dataPoint]
+            ;
+
+            BubbleCursor.init(
+                {
+                    container:'canvasContainer',
+                    width:512,
+                    height:512
+                },
+                true,
+                [
+                    {type:'circle', center:{x:415, y:40}, radius:30},
+                    {type:'circle', center:{x:180, y:270}, radius:25},
+                    {type:'circle', center:{x:430, y:370}, radius:30},
+                    {type:'circle', center:{x:60, y:200}, radius:15},
+                    {type:'circle', center:{x:220, y:420}, radius:10},
+                    {type:'circle', center:{x:200, y:450}, radius:20},
+                    {type:'circle', center:{x:240, y:460}, radius:15},
+                    {type:'rectangle', topLeft:{x:80, y:380}, height:40, width:30},
+                    {type:'rectangle', topLeft:{x:100, y:100}, height:20, width:50},
+                    {type:'rectangle', topLeft:{x:350, y:320}, height:60, width:30},
+                    {type:'rectangle', topLeft:{x:220, y:310}, height:20, width:20},
+                    {type:'polygon', vertices:[{x:380, y:180}, {x:450, y:250}, {x:420, y:170}]},
+                    {type:'polygon', vertices:[{x:240, y:80}, {x:300, y:150}, {x:380, y:70}]},
+                    {type:'polygon', vertices:[{x:240, y:250}, {x:270, y:230}, {x:310, y:250}, {x:280, y:300}]}
+                ],
+                [11, 4, 8, 9, 10, 11, 6, 3],
+                {
+                    beforeStart:function() {
+                        alert('Click on the green shapes as quickly and as accurately as possible.')
+                        start = new Date().getTime();
+                    },
+                    hit:function() {
+                        dataPoint.duration = new Date().getTime() - start;
+                        data.push(dataPoint);
+                        dataPoint = {misses:0};
+                        start = new Date().getTime();
+                    },
+                    miss:function() {
+                        dataPoint.misses += 1
+                    },
+                    afterFinish:function() {
+                        var
+                            numPoints = data.length,
+                            totalTime = 0,
+                            totalMisses = 0
+                        ;
+                        for (var pointNo = -1; ++pointNo < numPoints;) {
+                            var point = data[pointNo];
+                            totalTime += point.duration;
+                            totalMisses += point.misses;
+                        }
+                        alert(
+                          'Total Time: ' + totalTime + 'ms\n' +
+                          'Average Time per Target: ' + (totalTime / numPoints)  + 'ms\n' +
+                          'Total Misses: ' + totalMisses + '\n' +
+                          'Average Misses per Target: ' + (totalMisses / numPoints) + '\n'
+                        );
+                    }
+                }
+            );
+        </script>
+    </body>
+</html>
