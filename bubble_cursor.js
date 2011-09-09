@@ -88,9 +88,9 @@ var BubbleCursor = (function () {
                 function(shape) {
                     return function () {
                         if (shape) {
-                            shape = shape.shape;
-                            shape.attr({fill:'#91ff75', stroke:'#27c200'});
-                            shape.animate({fill:'#f0fffc', stroke:'#bdebff'}, 250);
+                            shapeObj = shape.shape;
+                            shapeObj.attr({fill:'#91ff75', stroke:'#27c200'});
+                            shapeObj.animate({fill:'#f0fffc', stroke:'#bdebff'}, 250);
                         }
                     }
                 }
