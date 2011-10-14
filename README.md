@@ -1,5 +1,6 @@
 # BubbleCursor
-An implementation of the Bubble Cursor as described by Grossman and Balakrishnan.
+An implementation of the Bubble Cursor as described by Grossman and Balakrishnan with
+additional instrumentation for conducting user testing.
 
 ## License
     Copyright (c) 2011 Vinson Chuong
@@ -20,4 +21,3 @@ An implementation of the Bubble Cursor as described by Grossman and Balakrishnan
     COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
     IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
     CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
