@@ -1,0 +1,900 @@
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 18:59:33) [GET]
+
+ActionController::RoutingError (No route matches "/style.css" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 18:59:33) [GET]
+
+ActionController::RoutingError (No route matches "/raphael.js" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 18:59:33) [GET]
+
+ActionController::RoutingError (No route matches "/search_tree.js" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 18:59:33) [GET]
+
+ActionController::RoutingError (No route matches "/geometry.js" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 18:59:33) [GET]
+
+ActionController::RoutingError (No route matches "/bubble_cursor.js" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 18:59:34) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (3.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateTests (20111014022012)
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "tests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "data" varchar(255)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20111014022012')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("tests")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateTests (20111014022012)
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "results" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "data" varchar(255)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20111014022012')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("results")[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 19:53:37) [GET]
+
+ActionController::RoutingError (No route matches "/style.css" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 19:53:39) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 20:03:18) [GET]
+
+ActionController::RoutingError (No route matches "/style.css" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 20:03:29) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResultsController#create (for 127.0.0.1 at 2011-10-13 20:03:36) [POST]
+  Parameters: {"data"=>"[{\"misses\":0,\"duration\":742},{\"misses\":0,\"duration\":742},{\"misses\":0,\"duration\":882},{\"misses\":0,\"duration\":766},{\"misses\":0,\"duration\":844},{\"misses\":0,\"duration\":1172},{\"misses\":0,\"duration\":868},{\"misses\":0,\"duration\":960},{\"misses\":0,\"duration\":882}]"}
+  [4;36;1mResult Create (1.0ms)[0m   [0;1mINSERT INTO "results" ("data") VALUES('[{"misses":0,"duration":742},{"misses":0,"duration":742},{"misses":0,"duration":882},{"misses":0,"duration":766},{"misses":0,"duration":844},{"misses":0,"duration":1172},{"misses":0,"duration":868},{"misses":0,"duration":960},{"misses":0,"duration":882}]')[0m
+
+ActionView::MissingTemplate (Missing template results/create.erb in view path D:/Users/vinsonchuong/Projects/BubbleCursor/app/views):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 20:04:26) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResultsController#create (for 127.0.0.1 at 2011-10-13 20:04:33) [POST]
+  Parameters: {"data"=>"[{\"misses\":0,\"duration\":913},{\"misses\":0,\"duration\":913},{\"misses\":0,\"duration\":1148},{\"misses\":0,\"duration\":766},{\"misses\":0,\"duration\":938},{\"misses\":0,\"duration\":680},{\"misses\":0,\"duration\":766},{\"misses\":0,\"duration\":877},{\"misses\":0,\"duration\":833}]"}
+  [4;35;1mResult Create (1.0ms)[0m   [0mINSERT INTO "results" ("data") VALUES('[{"misses":0,"duration":913},{"misses":0,"duration":913},{"misses":0,"duration":1148},{"misses":0,"duration":766},{"misses":0,"duration":938},{"misses":0,"duration":680},{"misses":0,"duration":766},{"misses":0,"duration":877},{"misses":0,"duration":833}]')[0m
+
+ActionView::MissingTemplate (Missing template results/create.erb in view path D:/Users/vinsonchuong/Projects/BubbleCursor/app/views):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mResult Load (0.0ms)[0m   [0;1mSELECT * FROM "results" [0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 20:05:41) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResultsController#create (for 127.0.0.1 at 2011-10-13 20:05:49) [POST]
+  Parameters: {"data"=>"[{\"misses\":0,\"duration\":2284},{\"misses\":0,\"duration\":2284},{\"misses\":0,\"duration\":1014},{\"misses\":0,\"duration\":744},{\"misses\":0,\"duration\":874},{\"misses\":0,\"duration\":758},{\"misses\":0,\"duration\":726},{\"misses\":0,\"duration\":844},{\"misses\":0,\"duration\":938}]"}
+  [4;36;1mResult Create (0.0ms)[0m   [0;1mINSERT INTO "results" ("data") VALUES('[{"misses":0,"duration":2284},{"misses":0,"duration":2284},{"misses":0,"duration":1014},{"misses":0,"duration":744},{"misses":0,"duration":874},{"misses":0,"duration":758},{"misses":0,"duration":726},{"misses":0,"duration":844},{"misses":0,"duration":938}]')[0m
+Completed in 13ms (View: 1, DB: 0) | 200 OK [http://localhost/results]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 20:05:57) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResultsController#create (for 127.0.0.1 at 2011-10-13 20:06:05) [POST]
+  Parameters: {"data"=>"[{\"misses\":0,\"duration\":2226},{\"misses\":0,\"duration\":2226},{\"misses\":0,\"duration\":728},{\"misses\":0,\"duration\":648},{\"misses\":0,\"duration\":1148},{\"misses\":0,\"duration\":914},{\"misses\":0,\"duration\":970},{\"misses\":0,\"duration\":834},{\"misses\":0,\"duration\":893}]"}
+  [4;35;1mResult Create (2.0ms)[0m   [0mINSERT INTO "results" ("data") VALUES('[{"misses":0,"duration":2226},{"misses":0,"duration":2226},{"misses":0,"duration":728},{"misses":0,"duration":648},{"misses":0,"duration":1148},{"misses":0,"duration":914},{"misses":0,"duration":970},{"misses":0,"duration":834},{"misses":0,"duration":893}]')[0m
+Completed in 37ms (View: 1, DB: 2) | 200 OK [http://localhost/results]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 20:06:17) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 20:06:25) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 20:06:30) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 20:06:39) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 20:06:53) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 20:06:53) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 20:06:53) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResultsController#create (for 127.0.0.1 at 2011-10-13 20:07:00) [POST]
+  Parameters: {"data"=>"[{\"misses\":0,\"duration\":844},{\"misses\":0,\"duration\":844},{\"misses\":0,\"duration\":1258},{\"misses\":0,\"duration\":782},{\"misses\":0,\"duration\":937},{\"misses\":0,\"duration\":875},{\"misses\":0,\"duration\":859},{\"misses\":0,\"duration\":797},{\"misses\":0,\"duration\":819}]"}
+  [4;36;1mResult Create (2.0ms)[0m   [0;1mINSERT INTO "results" ("data") VALUES('[{"misses":0,"duration":844},{"misses":0,"duration":844},{"misses":0,"duration":1258},{"misses":0,"duration":782},{"misses":0,"duration":937},{"misses":0,"duration":875},{"misses":0,"duration":859},{"misses":0,"duration":797},{"misses":0,"duration":819}]')[0m
+Completed in 14ms (View: 1, DB: 2) | 200 OK [http://localhost/results]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 20:07:11) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 20:08:08) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 20:08:11) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 20:09:01) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 20:09:14) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResultsController#create (for 127.0.0.1 at 2011-10-13 20:09:22) [POST]
+  Parameters: {"data"=>"[{\"misses\":0,\"duration\":887},{\"misses\":0,\"duration\":887},{\"misses\":0,\"duration\":1188},{\"misses\":0,\"duration\":868},{\"misses\":0,\"duration\":1108},{\"misses\":0,\"duration\":828},{\"misses\":0,\"duration\":814},{\"misses\":0,\"duration\":1046},{\"misses\":0,\"duration\":1056}]"}
+  [4;35;1mResult Create (2.0ms)[0m   [0mINSERT INTO "results" ("data") VALUES('[{"misses":0,"duration":887},{"misses":0,"duration":887},{"misses":0,"duration":1188},{"misses":0,"duration":868},{"misses":0,"duration":1108},{"misses":0,"duration":828},{"misses":0,"duration":814},{"misses":0,"duration":1046},{"misses":0,"duration":1056}]')[0m
+Completed in 14ms (View: 1, DB: 2) | 200 OK [http://localhost/results]
+  [4;35;1mResult Load (1.0ms)[0m   [0mSELECT * FROM "results" [0m
+  [4;36;1mResult Load (0.0ms)[0m   [0;1mSELECT * FROM "results" [0m
+  [4;35;1mResult Load (0.0ms)[0m   [0mSELECT * FROM "results" [0m
+
+
+Processing ResultsController#create (for 127.0.0.1 at 2011-10-13 20:26:52) [POST]
+  Parameters: {"data"=>"[{\"misses\":0,\"duration\":2837},{\"misses\":0,\"duration\":2837},{\"misses\":0,\"duration\":804},{\"misses\":0,\"duration\":680},{\"misses\":0,\"duration\":1062001},{\"misses\":0,\"duration\":1369},{\"misses\":0,\"duration\":928},{\"misses\":0,\"duration\":867},{\"misses\":0,\"duration\":1796}]"}
+  [4;36;1mResult Create (1.0ms)[0m   [0;1mINSERT INTO "results" ("data") VALUES('[{"misses":0,"duration":2837},{"misses":0,"duration":2837},{"misses":0,"duration":804},{"misses":0,"duration":680},{"misses":0,"duration":1062001},{"misses":0,"duration":1369},{"misses":0,"duration":928},{"misses":0,"duration":867},{"misses":0,"duration":1796}]')[0m
+Completed in 13ms (View: 1, DB: 1) | 200 OK [http://localhost/results]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 20:28:39) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResultsController#create (for 127.0.0.1 at 2011-10-13 20:28:49) [POST]
+  Parameters: {"data"=>"[{\"misses\":0,\"duration\":3680},{\"misses\":0,\"duration\":3680},{\"misses\":0,\"duration\":1079},{\"misses\":0,\"duration\":805},{\"misses\":0,\"duration\":773},{\"misses\":0,\"duration\":921},{\"misses\":0,\"duration\":782},{\"misses\":0,\"duration\":828},{\"misses\":0,\"duration\":758}]"}
+  [4;35;1mResult Create (4.0ms)[0m   [0mINSERT INTO "results" ("data") VALUES('[{"misses":0,"duration":3680},{"misses":0,"duration":3680},{"misses":0,"duration":1079},{"misses":0,"duration":805},{"misses":0,"duration":773},{"misses":0,"duration":921},{"misses":0,"duration":782},{"misses":0,"duration":828},{"misses":0,"duration":758}]')[0m
+Completed in 19ms (View: 1, DB: 4) | 200 OK [http://localhost/results]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 20:34:12) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 20:34:55) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 20:34:56) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 20:34:58) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 20:35:34) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 20:35:48) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 20:36:34) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResultsController#create (for 127.0.0.1 at 2011-10-13 20:36:46) [POST]
+  Parameters: {"data"=>"[{\"misses\":0,\"duration\":5691},{\"misses\":0,\"duration\":5691},{\"misses\":0,\"duration\":1124},{\"misses\":0,\"duration\":749},{\"misses\":0,\"duration\":1102},{\"misses\":0,\"duration\":884},{\"misses\":0,\"duration\":936},{\"misses\":0,\"duration\":1032},{\"misses\":0,\"duration\":1257}]"}
+  [4;36;1mResult Create (1.0ms)[0m   [0;1mINSERT INTO "results" ("data") VALUES('[{"misses":0,"duration":5691},{"misses":0,"duration":5691},{"misses":0,"duration":1124},{"misses":0,"duration":749},{"misses":0,"duration":1102},{"misses":0,"duration":884},{"misses":0,"duration":936},{"misses":0,"duration":1032},{"misses":0,"duration":1257}]')[0m
+Completed in 18ms (View: 0, DB: 1) | 200 OK [http://localhost/results]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 20:40:20) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResultsController#create (for 127.0.0.1 at 2011-10-13 20:40:33) [POST]
+  Parameters: {"data"=>"[{\"misses\":0,\"duration\":6563},{\"misses\":0,\"duration\":6563},{\"misses\":0,\"duration\":1788},{\"misses\":0,\"duration\":712},{\"misses\":0,\"duration\":844},{\"misses\":0,\"duration\":844},{\"misses\":0,\"duration\":772},{\"misses\":0,\"duration\":1001},{\"misses\":0,\"duration\":814}]"}
+  [4;35;1mResult Create (2.0ms)[0m   [0mINSERT INTO "results" ("data") VALUES('[{"misses":0,"duration":6563},{"misses":0,"duration":6563},{"misses":0,"duration":1788},{"misses":0,"duration":712},{"misses":0,"duration":844},{"misses":0,"duration":844},{"misses":0,"duration":772},{"misses":0,"duration":1001},{"misses":0,"duration":814}]')[0m
+Completed in 24ms (View: 1, DB: 2) | 200 OK [http://localhost/results]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 20:42:43) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mResult Load (1.0ms)[0m   [0;1mSELECT * FROM "results" [0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 20:43:19) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResultsController#create (for 127.0.0.1 at 2011-10-13 20:43:26) [POST]
+  Parameters: {"data"=>"[{\"misses\":0,\"duration\":1045},{\"misses\":0,\"duration\":1045},{\"misses\":0,\"duration\":1220},{\"misses\":0,\"duration\":686},{\"misses\":0,\"duration\":962},{\"misses\":0,\"duration\":844},{\"misses\":0,\"duration\":922},{\"misses\":0,\"duration\":1193},{\"misses\":0,\"duration\":1056}]"}
+  [4;36;1mResult Create (1.0ms)[0m   [0;1mINSERT INTO "results" ("data") VALUES('[{"misses":0,"duration":1045},{"misses":0,"duration":1045},{"misses":0,"duration":1220},{"misses":0,"duration":686},{"misses":0,"duration":962},{"misses":0,"duration":844},{"misses":0,"duration":922},{"misses":0,"duration":1193},{"misses":0,"duration":1056}]')[0m
+Completed in 14ms (View: 1, DB: 1) | 200 OK [http://localhost/results]
+  [4;35;1mResult Load (0.0ms)[0m   [0mSELECT * FROM "results" [0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 20:47:55) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 20:48:14) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 20:53:25) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 21:26:04) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 21:37:40) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResultsController#create (for 127.0.0.1 at 2011-10-13 21:38:05) [POST]
+  Parameters: {"data"=>"[{\"misses\":0,\"duration\":8914},{\"misses\":0,\"duration\":8914},{\"misses\":0,\"duration\":2421},{\"misses\":0,\"duration\":900},{\"misses\":0,\"duration\":883},{\"misses\":0,\"duration\":1030},{\"misses\":0,\"duration\":705},{\"misses\":0,\"duration\":733},{\"misses\":0,\"duration\":814}]"}
+  [4;35;1mResult Create (1.0ms)[0m   [0mINSERT INTO "results" ("data") VALUES('[{"misses":0,"duration":8914},{"misses":0,"duration":8914},{"misses":0,"duration":2421},{"misses":0,"duration":900},{"misses":0,"duration":883},{"misses":0,"duration":1030},{"misses":0,"duration":705},{"misses":0,"duration":733},{"misses":0,"duration":814}]')[0m
+Completed in 15ms (View: 1, DB: 1) | 200 OK [http://localhost/results]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 21:40:09) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResultsController#create (for 127.0.0.1 at 2011-10-13 21:40:25) [POST]
+  Parameters: {"data"=>"[{\"misses\":0,\"duration\":1046},{\"misses\":0,\"duration\":1046},{\"misses\":0,\"duration\":1367},{\"misses\":0,\"duration\":874},{\"misses\":0,\"duration\":946},{\"misses\":0,\"duration\":1202},{\"misses\":0,\"duration\":853},{\"misses\":0,\"duration\":806},{\"misses\":0,\"duration\":702}]"}
+  [4;36;1mResult Create (3.0ms)[0m   [0;1mINSERT INTO "results" ("data") VALUES('[{"misses":0,"duration":1046},{"misses":0,"duration":1046},{"misses":0,"duration":1367},{"misses":0,"duration":874},{"misses":0,"duration":946},{"misses":0,"duration":1202},{"misses":0,"duration":853},{"misses":0,"duration":806},{"misses":0,"duration":702}]')[0m
+Completed in 20ms (View: 2, DB: 3) | 200 OK [http://localhost/results]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 21:40:43) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResultsController#create (for 127.0.0.1 at 2011-10-13 21:41:01) [POST]
+  Parameters: {"data"=>"[{\"misses\":0,\"duration\":3293},{\"misses\":0,\"duration\":3293},{\"misses\":0,\"duration\":812},{\"misses\":0,\"duration\":611},{\"misses\":0,\"duration\":764},{\"misses\":0,\"duration\":790},{\"misses\":0,\"duration\":782},{\"misses\":0,\"duration\":812},{\"misses\":0,\"duration\":680}]"}
+  [4;35;1mResult Create (1.0ms)[0m   [0mINSERT INTO "results" ("data") VALUES('[{"misses":0,"duration":3293},{"misses":0,"duration":3293},{"misses":0,"duration":812},{"misses":0,"duration":611},{"misses":0,"duration":764},{"misses":0,"duration":790},{"misses":0,"duration":782},{"misses":0,"duration":812},{"misses":0,"duration":680}]')[0m
+Completed in 12ms (View: 1, DB: 1) | 200 OK [http://localhost/results]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 21:55:44) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 21:55:48) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 21:55:49) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 21:56:17) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 21:59:07) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 21:59:29) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 21:59:37) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 21:59:48) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 22:00:36) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 22:00:47) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 22:00:49) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 22:01:04) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 22:01:05) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 22:01:19) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 22:01:41) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResultsController#create (for 127.0.0.1 at 2011-10-13 22:02:08) [POST]
+  Parameters: {"data"=>"[{\"misses\":0,\"duration\":593},{\"misses\":0,\"duration\":593},{\"misses\":0,\"duration\":1111},{\"misses\":0,\"duration\":788},{\"misses\":0,\"duration\":860},{\"misses\":0,\"duration\":1132},{\"misses\":0,\"duration\":1102},{\"misses\":0,\"duration\":1055},{\"misses\":0,\"duration\":1773}]"}
+  [4;36;1mResult Create (1.0ms)[0m   [0;1mINSERT INTO "results" ("data") VALUES('[{"misses":0,"duration":593},{"misses":0,"duration":593},{"misses":0,"duration":1111},{"misses":0,"duration":788},{"misses":0,"duration":860},{"misses":0,"duration":1132},{"misses":0,"duration":1102},{"misses":0,"duration":1055},{"misses":0,"duration":1773}]')[0m
+Completed in 12ms (View: 1, DB: 1) | 200 OK [http://localhost/results]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-13 22:03:41) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResultsController#create (for 127.0.0.1 at 2011-10-13 22:03:58) [POST]
+  Parameters: {"data"=>"[{\"misses\":0,\"duration\":673},{\"misses\":0,\"duration\":673},{\"misses\":0,\"duration\":992},{\"misses\":0,\"duration\":634},{\"misses\":0,\"duration\":866},{\"misses\":0,\"duration\":1000},{\"misses\":0,\"duration\":799},{\"misses\":0,\"duration\":866},{\"misses\":0,\"duration\":922}]"}
+  [4;35;1mResult Create (1.0ms)[0m   [0mINSERT INTO "results" ("data") VALUES('[{"misses":0,"duration":673},{"misses":0,"duration":673},{"misses":0,"duration":992},{"misses":0,"duration":634},{"misses":0,"duration":866},{"misses":0,"duration":1000},{"misses":0,"duration":799},{"misses":0,"duration":866},{"misses":0,"duration":922}]')[0m
+Completed in 13ms (View: 1, DB: 1) | 200 OK [http://localhost/results]
+  [4;36;1mResult Load (0.0ms)[0m   [0;1mSELECT * FROM "results" [0m
+  [4;35;1mResult Load (0.0ms)[0m   [0mSELECT * FROM "results" [0m
+  [4;36;1mResult Load (0.0ms)[0m   [0;1mSELECT * FROM "results" [0m
+  [4;35;1mResult Destroy (0.0ms)[0m   [0mDELETE FROM "results" WHERE "id" = 1[0m
+  [4;36;1mResult Destroy (0.0ms)[0m   [0;1mDELETE FROM "results" WHERE "id" = 2[0m
+  [4;35;1mResult Destroy (0.0ms)[0m   [0mDELETE FROM "results" WHERE "id" = 3[0m
+  [4;36;1mResult Destroy (0.0ms)[0m   [0;1mDELETE FROM "results" WHERE "id" = 4[0m
+  [4;35;1mResult Destroy (0.0ms)[0m   [0mDELETE FROM "results" WHERE "id" = 5[0m
+  [4;36;1mResult Destroy (0.0ms)[0m   [0;1mDELETE FROM "results" WHERE "id" = 6[0m
+  [4;35;1mResult Destroy (15.6ms)[0m   [0mDELETE FROM "results" WHERE "id" = 7[0m
+  [4;36;1mResult Destroy (0.0ms)[0m   [0;1mDELETE FROM "results" WHERE "id" = 8[0m
+  [4;35;1mResult Destroy (0.0ms)[0m   [0mDELETE FROM "results" WHERE "id" = 9[0m
+  [4;36;1mResult Destroy (0.0ms)[0m   [0;1mDELETE FROM "results" WHERE "id" = 10[0m
+  [4;35;1mResult Destroy (0.0ms)[0m   [0mDELETE FROM "results" WHERE "id" = 11[0m
+  [4;36;1mResult Destroy (0.0ms)[0m   [0;1mDELETE FROM "results" WHERE "id" = 12[0m
+  [4;35;1mResult Destroy (0.0ms)[0m   [0mDELETE FROM "results" WHERE "id" = 13[0m
+  [4;36;1mResult Destroy (0.0ms)[0m   [0;1mDELETE FROM "results" WHERE "id" = 14[0m
+  [4;35;1mResult Destroy (0.0ms)[0m   [0mDELETE FROM "results" WHERE "id" = 15[0m
+  [4;36;1mResult Destroy (0.0ms)[0m   [0;1mDELETE FROM "results" WHERE "id" = 16[0m
+  [4;35;1mResult Load (0.0ms)[0m   [0mSELECT * FROM "results" [0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-14 16:52:33) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResultsController#create (for 127.0.0.1 at 2011-10-14 16:54:59) [POST]
+  Parameters: {"data"=>"[null,null,null,null,[{\"misses\":0,\"duration\":744},{\"misses\":0,\"duration\":744},{\"misses\":0,\"duration\":655},{\"misses\":0,\"duration\":594},{\"misses\":0,\"duration\":562},{\"misses\":0,\"duration\":844},{\"misses\":0,\"duration\":562},{\"misses\":0,\"duration\":586},{\"misses\":0,\"duration\":734}],[{\"misses\":0,\"duration\":971},{\"misses\":0,\"duration\":971},{\"misses\":0,\"duration\":1178},{\"misses\":0,\"duration\":1196},{\"misses\":0,\"duration\":1296},{\"misses\":0,\"duration\":1533},{\"misses\":0,\"duration\":1070},{\"misses\":0,\"duration\":1040},{\"misses\":0,\"duration\":951}],[{\"misses\":0,\"duration\":1323},{\"misses\":0,\"duration\":1323},{\"misses\":0,\"duration\":898},{\"misses\":0,\"duration\":720},{\"misses\":0,\"duration\":857},{\"misses\":0,\"duration\":712},{\"misses\":0,\"duration\":695},{\"misses\":0,\"duration\":726},{\"misses\":0,\"duration\":854}],[{\"misses\":0,\"duration\":1391},{\"misses\":0,\"duration\":1391},{\"misses\":0,\"duration\":1125},{\"misses\":0,\"duration\":1053},{\"misses\":0,\"duration\":1149},{\"misses\":0,\"duration\":1006},{\"misses\":0,\"duration\":1126},{\"misses\":0,\"duration\":1070},{\"misses\":0,\"duration\":1812}],[{\"misses\":0,\"duration\":806},{\"misses\":0,\"duration\":806},{\"misses\":0,\"duration\":799},{\"misses\":0,\"duration\":750},{\"misses\":0,\"duration\":554},{\"misses\":0,\"duration\":766},{\"misses\":0,\"duration\":578},{\"misses\":0,\"duration\":831},{\"misses\":0,\"duration\":685}],[{\"misses\":0,\"duration\":1009},{\"misses\":0,\"duration\":1009},{\"misses\":0,\"duration\":1180},{\"misses\":0,\"duration\":1078},{\"misses\":0,\"duration\":782},{\"misses\":0,\"duration\":952},{\"misses\":0,\"duration\":665},{\"misses\":0,\"duration\":828},{\"misses\":0,\"duration\":742}],null,null,null,[{\"misses\":0,\"duration\":921},{\"misses\":0,\"duration\":921},{\"misses\":0,\"duration\":672},{\"misses\":0,\"duration\":788},{\"misses\":0,\"duration\":1570},{\"misses\":0,\"duration\":938},{\"misses\":0,\"duration\":967},{\"misses\":0,\"duration\":750},{\"misses\":0,\"duration\":962},{\"misses\":0,\"duration\":1390},{\"misses\":0,\"duration\":1048}],[{\"misses\":0,\"duration\":665},{\"misses\":0,\"duration\":665},{\"misses\":0,\"duration\":624},{\"misses\":0,\"duration\":836},{\"misses\":0,\"duration\":985},{\"misses\":0,\"duration\":728},{\"misses\":0,\"duration\":811},{\"misses\":0,\"duration\":619},{\"misses\":0,\"duration\":796},{\"misses\":0,\"duration\":680},{\"misses\":0,\"duration\":725}],[{\"misses\":0,\"duration\":797},{\"misses\":0,\"duration\":797},{\"misses\":0,\"duration\":820},{\"misses\":0,\"duration\":1234},{\"misses\":0,\"duration\":900},{\"misses\":0,\"duration\":1124},{\"misses\":0,\"duration\":968},{\"misses\":0,\"duration\":1071},{\"misses\":0,\"duration\":784},{\"misses\":0,\"duration\":1116},{\"misses\":0,\"duration\":788}]]"}
+  [4;36;1mResult Create (0.0ms)[0m   [0;1mINSERT INTO "results" ("data") VALUES('[null,null,null,null,[{"misses":0,"duration":744},{"misses":0,"duration":744},{"misses":0,"duration":655},{"misses":0,"duration":594},{"misses":0,"duration":562},{"misses":0,"duration":844},{"misses":0,"duration":562},{"misses":0,"duration":586},{"misses":0,"duration":734}],[{"misses":0,"duration":971},{"misses":0,"duration":971},{"misses":0,"duration":1178},{"misses":0,"duration":1196},{"misses":0,"duration":1296},{"misses":0,"duration":1533},{"misses":0,"duration":1070},{"misses":0,"duration":1040},{"misses":0,"duration":951}],[{"misses":0,"duration":1323},{"misses":0,"duration":1323},{"misses":0,"duration":898},{"misses":0,"duration":720},{"misses":0,"duration":857},{"misses":0,"duration":712},{"misses":0,"duration":695},{"misses":0,"duration":726},{"misses":0,"duration":854}],[{"misses":0,"duration":1391},{"misses":0,"duration":1391},{"misses":0,"duration":1125},{"misses":0,"duration":1053},{"misses":0,"duration":1149},{"misses":0,"duration":1006},{"misses":0,"duration":1126},{"misses":0,"duration":1070},{"misses":0,"duration":1812}],[{"misses":0,"duration":806},{"misses":0,"duration":806},{"misses":0,"duration":799},{"misses":0,"duration":750},{"misses":0,"duration":554},{"misses":0,"duration":766},{"misses":0,"duration":578},{"misses":0,"duration":831},{"misses":0,"duration":685}],[{"misses":0,"duration":1009},{"misses":0,"duration":1009},{"misses":0,"duration":1180},{"misses":0,"duration":1078},{"misses":0,"duration":782},{"misses":0,"duration":952},{"misses":0,"duration":665},{"misses":0,"duration":828},{"misses":0,"duration":742}],null,null,null,[{"misses":0,"duration":921},{"misses":0,"duration":921},{"misses":0,"duration":672},{"misses":0,"duration":788},{"misses":0,"duration":1570},{"misses":0,"duration":938},{"misses":0,"duration":967},{"misses":0,"duration":750},{"misses":0,"duration":962},{"misses":0,"duration":1390},{"misses":0,"duration":1048}],[{"misses":0,"duration":665},{"misses":0,"duration":665},{"misses":0,"duration":624},{"misses":0,"duration":836},{"misses":0,"duration":985},{"misses":0,"duration":728},{"misses":0,"duration":811},{"misses":0,"duration":619},{"misses":0,"duration":796},{"misses":0,"duration":680},{"misses":0,"duration":725}],[{"misses":0,"duration":797},{"misses":0,"duration":797},{"misses":0,"duration":820},{"misses":0,"duration":1234},{"misses":0,"duration":900},{"misses":0,"duration":1124},{"misses":0,"duration":968},{"misses":0,"duration":1071},{"misses":0,"duration":784},{"misses":0,"duration":1116},{"misses":0,"duration":788}]]')[0m
+Completed in 1908ms (View: 1, DB: 0) | 200 OK [http://localhost/results]
+  [4;36;1mResult Load (0.0ms)[0m   [0;1mSELECT * FROM "results" [0m
+  [4;35;1mResult Load (0.0ms)[0m   [0mSELECT * FROM "results" [0m
+  [4;36;1mResult Load (0.0ms)[0m   [0;1mSELECT * FROM "results" [0m
+  [4;35;1mResult Load (0.0ms)[0m   [0mSELECT * FROM "results" [0m
+  [4;36;1mResult Load (0.0ms)[0m   [0;1mSELECT * FROM "results" [0m
+  [4;35;1mResult Load (0.0ms)[0m   [0mSELECT * FROM "results" [0m
+  [4;36;1mResult Load (0.0ms)[0m   [0;1mSELECT * FROM "results" [0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-14 16:56:58) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResultsController#create (for 127.0.0.1 at 2011-10-14 16:58:40) [POST]
+  Parameters: {"data"=>"[[{\"misses\":0,\"duration\":1142},{\"misses\":0,\"duration\":1142},{\"misses\":0,\"duration\":898},{\"misses\":0,\"duration\":718},{\"misses\":0,\"duration\":720},{\"misses\":1,\"duration\":1280},{\"misses\":0,\"duration\":843},{\"misses\":0,\"duration\":672},{\"misses\":0,\"duration\":860}],[{\"misses\":0,\"duration\":1384},{\"misses\":0,\"duration\":1384},{\"misses\":0,\"duration\":978},{\"misses\":0,\"duration\":976},{\"misses\":0,\"duration\":1000},{\"misses\":0,\"duration\":899},{\"misses\":0,\"duration\":766},{\"misses\":0,\"duration\":640},{\"misses\":0,\"duration\":680}],null,null,null,[{\"misses\":0,\"duration\":1123},{\"misses\":0,\"duration\":1123},{\"misses\":0,\"duration\":1126},{\"misses\":0,\"duration\":1038},{\"misses\":0,\"duration\":984},{\"misses\":0,\"duration\":1289},{\"misses\":0,\"duration\":1321},{\"misses\":0,\"duration\":1374},{\"misses\":0,\"duration\":781}],[{\"misses\":0,\"duration\":784},{\"misses\":0,\"duration\":784},{\"misses\":0,\"duration\":905},{\"misses\":0,\"duration\":718},{\"misses\":0,\"duration\":790},{\"misses\":0,\"duration\":1000},{\"misses\":0,\"duration\":898},{\"misses\":0,\"duration\":983},{\"misses\":0,\"duration\":923}],[{\"misses\":0,\"duration\":1181},{\"misses\":0,\"duration\":1181},{\"misses\":0,\"duration\":1158},{\"misses\":0,\"duration\":1624},{\"misses\":0,\"duration\":1217},{\"misses\":0,\"duration\":1242},{\"misses\":0,\"duration\":1188},{\"misses\":0,\"duration\":1562},{\"misses\":0,\"duration\":1454}],null,null,[{\"misses\":0,\"duration\":863},{\"misses\":0,\"duration\":863},{\"misses\":0,\"duration\":868},{\"misses\":0,\"duration\":843},{\"misses\":0,\"duration\":780},{\"misses\":0,\"duration\":806},{\"misses\":0,\"duration\":1468},{\"misses\":0,\"duration\":774},{\"misses\":0,\"duration\":944}],null,[{\"misses\":1,\"duration\":1712},{\"misses\":1,\"duration\":1712},{\"misses\":0,\"duration\":680},{\"misses\":0,\"duration\":790},{\"misses\":0,\"duration\":632},{\"misses\":0,\"duration\":610},{\"misses\":0,\"duration\":500},{\"misses\":0,\"duration\":531},{\"misses\":0,\"duration\":492},{\"misses\":0,\"duration\":492},{\"misses\":0,\"duration\":780}],[{\"misses\":0,\"duration\":1117},{\"misses\":0,\"duration\":1117},{\"misses\":0,\"duration\":680},{\"misses\":0,\"duration\":648},{\"misses\":0,\"duration\":868},{\"misses\":0,\"duration\":767},{\"misses\":0,\"duration\":616},{\"misses\":0,\"duration\":478},{\"misses\":0,\"duration\":578},{\"misses\":0,\"duration\":726},{\"misses\":0,\"duration\":1234}],null,[{\"misses\":0,\"duration\":947},{\"misses\":0,\"duration\":947},{\"misses\":0,\"duration\":874},{\"misses\":0,\"duration\":1054},{\"misses\":0,\"duration\":1020},{\"misses\":0,\"duration\":857},{\"misses\":0,\"duration\":1108},{\"misses\":0,\"duration\":892},{\"misses\":0,\"duration\":1570},{\"misses\":0,\"duration\":781},{\"misses\":0,\"duration\":898}]]"}
+  [4;35;1mResult Create (2.0ms)[0m   [0mINSERT INTO "results" ("data") VALUES('[[{"misses":0,"duration":1142},{"misses":0,"duration":1142},{"misses":0,"duration":898},{"misses":0,"duration":718},{"misses":0,"duration":720},{"misses":1,"duration":1280},{"misses":0,"duration":843},{"misses":0,"duration":672},{"misses":0,"duration":860}],[{"misses":0,"duration":1384},{"misses":0,"duration":1384},{"misses":0,"duration":978},{"misses":0,"duration":976},{"misses":0,"duration":1000},{"misses":0,"duration":899},{"misses":0,"duration":766},{"misses":0,"duration":640},{"misses":0,"duration":680}],null,null,null,[{"misses":0,"duration":1123},{"misses":0,"duration":1123},{"misses":0,"duration":1126},{"misses":0,"duration":1038},{"misses":0,"duration":984},{"misses":0,"duration":1289},{"misses":0,"duration":1321},{"misses":0,"duration":1374},{"misses":0,"duration":781}],[{"misses":0,"duration":784},{"misses":0,"duration":784},{"misses":0,"duration":905},{"misses":0,"duration":718},{"misses":0,"duration":790},{"misses":0,"duration":1000},{"misses":0,"duration":898},{"misses":0,"duration":983},{"misses":0,"duration":923}],[{"misses":0,"duration":1181},{"misses":0,"duration":1181},{"misses":0,"duration":1158},{"misses":0,"duration":1624},{"misses":0,"duration":1217},{"misses":0,"duration":1242},{"misses":0,"duration":1188},{"misses":0,"duration":1562},{"misses":0,"duration":1454}],null,null,[{"misses":0,"duration":863},{"misses":0,"duration":863},{"misses":0,"duration":868},{"misses":0,"duration":843},{"misses":0,"duration":780},{"misses":0,"duration":806},{"misses":0,"duration":1468},{"misses":0,"duration":774},{"misses":0,"duration":944}],null,[{"misses":1,"duration":1712},{"misses":1,"duration":1712},{"misses":0,"duration":680},{"misses":0,"duration":790},{"misses":0,"duration":632},{"misses":0,"duration":610},{"misses":0,"duration":500},{"misses":0,"duration":531},{"misses":0,"duration":492},{"misses":0,"duration":492},{"misses":0,"duration":780}],[{"misses":0,"duration":1117},{"misses":0,"duration":1117},{"misses":0,"duration":680},{"misses":0,"duration":648},{"misses":0,"duration":868},{"misses":0,"duration":767},{"misses":0,"duration":616},{"misses":0,"duration":478},{"misses":0,"duration":578},{"misses":0,"duration":726},{"misses":0,"duration":1234}],null,[{"misses":0,"duration":947},{"misses":0,"duration":947},{"misses":0,"duration":874},{"misses":0,"duration":1054},{"misses":0,"duration":1020},{"misses":0,"duration":857},{"misses":0,"duration":1108},{"misses":0,"duration":892},{"misses":0,"duration":1570},{"misses":0,"duration":781},{"misses":0,"duration":898}]]')[0m
+Completed in 14ms (View: 1, DB: 2) | 200 OK [http://localhost/results]
+  [4;35;1mResult Load (1.0ms)[0m   [0mSELECT * FROM "results" [0m
+  [4;36;1mResult Load (0.0ms)[0m   [0;1mSELECT * FROM "results" [0m
+  [4;35;1mResult Destroy (0.0ms)[0m   [0mDELETE FROM "results" WHERE "id" = 17[0m
+  [4;36;1mResult Destroy (0.0ms)[0m   [0;1mDELETE FROM "results" WHERE "id" = 18[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-10-14 17:00:16) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Binx86/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResultsController#create (for 127.0.0.1 at 2011-10-14 17:02:53) [POST]
+  Parameters: {"data"=>"[[{\"misses\":0,\"duration\":1098},{\"misses\":0,\"duration\":1098},{\"misses\":0,\"duration\":742},{\"misses\":0,\"duration\":757},{\"misses\":0,\"duration\":671},{\"misses\":0,\"duration\":766},{\"misses\":0,\"duration\":633},{\"misses\":0,\"duration\":522},{\"misses\":0,\"duration\":806}],[{\"misses\":0,\"duration\":1235},{\"misses\":0,\"duration\":1235},{\"misses\":0,\"duration\":1218},{\"misses\":0,\"duration\":891},{\"misses\":0,\"duration\":952},{\"misses\":0,\"duration\":876},{\"misses\":0,\"duration\":772},{\"misses\":0,\"duration\":774},{\"misses\":0,\"duration\":1578}],[{\"misses\":0,\"duration\":1051},{\"misses\":0,\"duration\":1051},{\"misses\":0,\"duration\":866},{\"misses\":0,\"duration\":860},{\"misses\":0,\"duration\":1234},{\"misses\":0,\"duration\":1078},{\"misses\":0,\"duration\":742},{\"misses\":0,\"duration\":938},{\"misses\":0,\"duration\":906}],[{\"misses\":0,\"duration\":1300},{\"misses\":0,\"duration\":1300},{\"misses\":0,\"duration\":1509},{\"misses\":0,\"duration\":960},{\"misses\":0,\"duration\":1188},{\"misses\":0,\"duration\":1148},{\"misses\":0,\"duration\":930},{\"misses\":0,\"duration\":1234},{\"misses\":0,\"duration\":1078}],[{\"misses\":0,\"duration\":752},{\"misses\":0,\"duration\":752},{\"misses\":0,\"duration\":734},{\"misses\":0,\"duration\":656},{\"misses\":0,\"duration\":835},{\"misses\":0,\"duration\":758},{\"misses\":0,\"duration\":592},{\"misses\":0,\"duration\":680},{\"misses\":0,\"duration\":697}],[{\"misses\":0,\"duration\":1315},{\"misses\":0,\"duration\":1315},{\"misses\":0,\"duration\":1546},{\"misses\":0,\"duration\":1094},{\"misses\":0,\"duration\":1062},{\"misses\":0,\"duration\":1126},{\"misses\":0,\"duration\":1508},{\"misses\":0,\"duration\":853},{\"misses\":0,\"duration\":960}],[{\"misses\":0,\"duration\":845},{\"misses\":0,\"duration\":845},{\"misses\":0,\"duration\":782},{\"misses\":0,\"duration\":860},{\"misses\":0,\"duration\":858},{\"misses\":0,\"duration\":1188},{\"misses\":0,\"duration\":773},{\"misses\":0,\"duration\":680},{\"misses\":0,\"duration\":710}],[{\"misses\":0,\"duration\":1301},{\"misses\":0,\"duration\":1301},{\"misses\":0,\"duration\":1046},{\"misses\":0,\"duration\":938},{\"misses\":0,\"duration\":775},{\"misses\":0,\"duration\":2208},{\"misses\":0,\"duration\":1204},{\"misses\":0,\"duration\":1296},{\"misses\":0,\"duration\":1288}],[{\"misses\":0,\"duration\":835},{\"misses\":0,\"duration\":835},{\"misses\":0,\"duration\":892},{\"misses\":0,\"duration\":750},{\"misses\":0,\"duration\":788},{\"misses\":0,\"duration\":704},{\"misses\":0,\"duration\":570},{\"misses\":0,\"duration\":562},{\"misses\":0,\"duration\":650}],[{\"misses\":0,\"duration\":815},{\"misses\":0,\"duration\":815},{\"misses\":0,\"duration\":812},{\"misses\":0,\"duration\":750},{\"misses\":0,\"duration\":613},{\"misses\":0,\"duration\":777},{\"misses\":0,\"duration\":438},{\"misses\":0,\"duration\":860},{\"misses\":0,\"duration\":436}],[{\"misses\":0,\"duration\":1042},{\"misses\":0,\"duration\":1042},{\"misses\":0,\"duration\":1045},{\"misses\":0,\"duration\":906},{\"misses\":0,\"duration\":923},{\"misses\":0,\"duration\":763},{\"misses\":0,\"duration\":892},{\"misses\":0,\"duration\":859},{\"misses\":0,\"duration\":867}],[{\"misses\":0,\"duration\":857},{\"misses\":0,\"duration\":857},{\"misses\":0,\"duration\":922},{\"misses\":0,\"duration\":819},{\"misses\":0,\"duration\":697},{\"misses\":0,\"duration\":1008},{\"misses\":0,\"duration\":975},{\"misses\":0,\"duration\":1000},{\"misses\":0,\"duration\":828}],[{\"misses\":0,\"duration\":775},{\"misses\":0,\"duration\":775},{\"misses\":0,\"duration\":688},{\"misses\":0,\"duration\":726},{\"misses\":0,\"duration\":586},{\"misses\":0,\"duration\":602},{\"misses\":0,\"duration\":506},{\"misses\":0,\"duration\":650},{\"misses\":0,\"duration\":431},{\"misses\":0,\"duration\":476},{\"misses\":0,\"duration\":874}],[{\"misses\":0,\"duration\":1170},{\"misses\":0,\"duration\":1170},{\"misses\":0,\"duration\":672},{\"misses\":0,\"duration\":712},{\"misses\":0,\"duration\":1030},{\"misses\":1,\"duration\":1226},{\"misses\":0,\"duration\":510},{\"misses\":0,\"duration\":976},{\"misses\":0,\"duration\":656},{\"misses\":0,\"duration\":869},{\"misses\":0,\"duration\":710}],[{\"misses\":0,\"duration\":903},{\"misses\":0,\"duration\":903},{\"misses\":0,\"duration\":944},{\"misses\":0,\"duration\":765},{\"misses\":0,\"duration\":696},{\"misses\":0,\"duration\":749},{\"misses\":0,\"duration\":806},{\"misses\":0,\"duration\":812},{\"misses\":0,\"duration\":963},{\"misses\":1,\"duration\":1749},{\"misses\":0,\"duration\":812}],[{\"misses\":0,\"duration\":1156},{\"misses\":0,\"duration\":1156},{\"misses\":0,\"duration\":1038},{\"misses\":0,\"duration\":954},{\"misses\":0,\"duration\":899},{\"misses\":1,\"duration\":1374},{\"misses\":0,\"duration\":978},{\"misses\":0,\"duration\":672},{\"misses\":0,\"duration\":772},{\"misses\":0,\"duration\":813},{\"misses\":0,\"duration\":780}]]"}
+  [4;36;1mResult Create (2.0ms)[0m   [0;1mINSERT INTO "results" ("data") VALUES('[[{"misses":0,"duration":1098},{"misses":0,"duration":1098},{"misses":0,"duration":742},{"misses":0,"duration":757},{"misses":0,"duration":671},{"misses":0,"duration":766},{"misses":0,"duration":633},{"misses":0,"duration":522},{"misses":0,"duration":806}],[{"misses":0,"duration":1235},{"misses":0,"duration":1235},{"misses":0,"duration":1218},{"misses":0,"duration":891},{"misses":0,"duration":952},{"misses":0,"duration":876},{"misses":0,"duration":772},{"misses":0,"duration":774},{"misses":0,"duration":1578}],[{"misses":0,"duration":1051},{"misses":0,"duration":1051},{"misses":0,"duration":866},{"misses":0,"duration":860},{"misses":0,"duration":1234},{"misses":0,"duration":1078},{"misses":0,"duration":742},{"misses":0,"duration":938},{"misses":0,"duration":906}],[{"misses":0,"duration":1300},{"misses":0,"duration":1300},{"misses":0,"duration":1509},{"misses":0,"duration":960},{"misses":0,"duration":1188},{"misses":0,"duration":1148},{"misses":0,"duration":930},{"misses":0,"duration":1234},{"misses":0,"duration":1078}],[{"misses":0,"duration":752},{"misses":0,"duration":752},{"misses":0,"duration":734},{"misses":0,"duration":656},{"misses":0,"duration":835},{"misses":0,"duration":758},{"misses":0,"duration":592},{"misses":0,"duration":680},{"misses":0,"duration":697}],[{"misses":0,"duration":1315},{"misses":0,"duration":1315},{"misses":0,"duration":1546},{"misses":0,"duration":1094},{"misses":0,"duration":1062},{"misses":0,"duration":1126},{"misses":0,"duration":1508},{"misses":0,"duration":853},{"misses":0,"duration":960}],[{"misses":0,"duration":845},{"misses":0,"duration":845},{"misses":0,"duration":782},{"misses":0,"duration":860},{"misses":0,"duration":858},{"misses":0,"duration":1188},{"misses":0,"duration":773},{"misses":0,"duration":680},{"misses":0,"duration":710}],[{"misses":0,"duration":1301},{"misses":0,"duration":1301},{"misses":0,"duration":1046},{"misses":0,"duration":938},{"misses":0,"duration":775},{"misses":0,"duration":2208},{"misses":0,"duration":1204},{"misses":0,"duration":1296},{"misses":0,"duration":1288}],[{"misses":0,"duration":835},{"misses":0,"duration":835},{"misses":0,"duration":892},{"misses":0,"duration":750},{"misses":0,"duration":788},{"misses":0,"duration":704},{"misses":0,"duration":570},{"misses":0,"duration":562},{"misses":0,"duration":650}],[{"misses":0,"duration":815},{"misses":0,"duration":815},{"misses":0,"duration":812},{"misses":0,"duration":750},{"misses":0,"duration":613},{"misses":0,"duration":777},{"misses":0,"duration":438},{"misses":0,"duration":860},{"misses":0,"duration":436}],[{"misses":0,"duration":1042},{"misses":0,"duration":1042},{"misses":0,"duration":1045},{"misses":0,"duration":906},{"misses":0,"duration":923},{"misses":0,"duration":763},{"misses":0,"duration":892},{"misses":0,"duration":859},{"misses":0,"duration":867}],[{"misses":0,"duration":857},{"misses":0,"duration":857},{"misses":0,"duration":922},{"misses":0,"duration":819},{"misses":0,"duration":697},{"misses":0,"duration":1008},{"misses":0,"duration":975},{"misses":0,"duration":1000},{"misses":0,"duration":828}],[{"misses":0,"duration":775},{"misses":0,"duration":775},{"misses":0,"duration":688},{"misses":0,"duration":726},{"misses":0,"duration":586},{"misses":0,"duration":602},{"misses":0,"duration":506},{"misses":0,"duration":650},{"misses":0,"duration":431},{"misses":0,"duration":476},{"misses":0,"duration":874}],[{"misses":0,"duration":1170},{"misses":0,"duration":1170},{"misses":0,"duration":672},{"misses":0,"duration":712},{"misses":0,"duration":1030},{"misses":1,"duration":1226},{"misses":0,"duration":510},{"misses":0,"duration":976},{"misses":0,"duration":656},{"misses":0,"duration":869},{"misses":0,"duration":710}],[{"misses":0,"duration":903},{"misses":0,"duration":903},{"misses":0,"duration":944},{"misses":0,"duration":765},{"misses":0,"duration":696},{"misses":0,"duration":749},{"misses":0,"duration":806},{"misses":0,"duration":812},{"misses":0,"duration":963},{"misses":1,"duration":1749},{"misses":0,"duration":812}],[{"misses":0,"duration":1156},{"misses":0,"duration":1156},{"misses":0,"duration":1038},{"misses":0,"duration":954},{"misses":0,"duration":899},{"misses":1,"duration":1374},{"misses":0,"duration":978},{"misses":0,"duration":672},{"misses":0,"duration":772},{"misses":0,"duration":813},{"misses":0,"duration":780}]]')[0m
+Completed in 14ms (View: 1, DB: 2) | 200 OK [http://localhost/results]
+  [4;35;1mResult Load (1.0ms)[0m   [0mSELECT * FROM "results" [0m

@@ -22,6 +22,7 @@ var BubbleCursor = (function () {
     //
     // Polygon vertices are assumed to be in consecutive order.
     function init(canvasParams, useBubbleCursor, shapeParams, targetSequence, handlers) {
+        $('#' + canvasParams.container).empty();
         canvas = new Raphael(canvasParams.container, canvasParams.width, canvasParams.height);
 
         cursor = canvas.circle(0, 0, 0);

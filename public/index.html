@@ -2,79 +2,430 @@
 <html>
     <head>
         <title>Bubble Cursor</title>
-        <link href="style.css" rel="stylesheet" media="screen">
-        <script type="text/javascript" src="raphael.js"></script>
-        <script type="text/javascript" src="geometry.js"></script>
-        <script type="text/javascript" src="search_tree.js"></script>
-        <script type="text/javascript" src="bubble_cursor.js"></script>
+        <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/smoothness/jquery-ui.css" rel="stylesheet" media="screen">
+        <link href="stylesheets/style.css" rel="stylesheet" media="screen">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="javascripts/raphael.js"></script>
+        <script type="text/javascript" src="javascripts/geometry.js"></script>
+        <script type="text/javascript" src="javascripts/search_tree.js"></script>
+        <script type="text/javascript" src="javascripts/bubble_cursor.js"></script>
     </head>
     <body>
         <div id="canvasContainer"></div>
+        <div id="dialog">
+            <p id="dialogText"></p>
+        </div>
         <script type="text/javascript">
             var
-                start,
-                dataPoint = {misses:0},
-                data = [dataPoint]
+                canvasParams = {
+                    container:'canvasContainer',
+                    width:600,
+                    height:600
+                },
+
+                smallPackedTargets = [
+                    {type:'circle', center:{x:128, y:23}, radius:10},
+                    {type:'circle', center:{x:302, y:32}, radius:16},
+                    {type:'circle', center:{x:26, y:34}, radius:15},
+                    {type:'circle', center:{x:169, y:34}, radius:12},
+                    {type:'circle', center:{x:78, y:39}, radius:14},
+                    {type:'circle', center:{x:498, y:42}, radius:11},
+                    {type:'circle', center:{x:563, y:44}, radius:20},
+                    {type:'circle', center:{x:383, y:45}, radius:16},
+                    {type:'circle', center:{x:438, y:45}, radius:16},
+                    {type:'circle', center:{x:220, y:57}, radius:12},
+                    {type:'circle', center:{x:119, y:69}, radius:12},
+                    {type:'circle', center:{x:275, y:80}, radius:14},
+                    {type:'circle', center:{x:336, y:89}, radius:11},
+                    {type:'circle', center:{x:79, y:95}, radius:10},
+                    {type:'circle', center:{x:449, y:96}, radius:15},
+                    {type:'circle', center:{x:515, y:100}, radius:20},
+                    {type:'circle', center:{x:569, y:104}, radius:14},
+                    {type:'circle', center:{x:393, y:105}, radius:17},
+                    {type:'circle', center:{x:158, y:115}, radius:11},
+                    {type:'circle', center:{x:214, y:115}, radius:18},
+                    {type:'circle', center:{x:32, y:119}, radius:17},
+                    {type:'circle', center:{x:321, y:132}, radius:12},
+                    {type:'circle', center:{x:103, y:134}, radius:11},
+                    {type:'circle', center:{x:262, y:150}, radius:10},
+                    {type:'circle', center:{x:423, y:153}, radius:19},
+                    {type:'circle', center:{x:489, y:164}, radius:15},
+                    {type:'circle', center:{x:37, y:166}, radius:10},
+                    {type:'circle', center:{x:218, y:168}, radius:14},
+                    {type:'circle', center:{x:544, y:170}, radius:13},
+                    {type:'circle', center:{x:300, y:172}, radius:12},
+                    {type:'circle', center:{x:159, y:176}, radius:15},
+                    {type:'circle', center:{x:372, y:185}, radius:11},
+                    {type:'circle', center:{x:104, y:186}, radius:14},
+                    {type:'circle', center:{x:244, y:205}, radius:11},
+                    {type:'circle', center:{x:339, y:211}, radius:11},
+                    {type:'circle', center:{x:31, y:214}, radius:14},
+                    {type:'circle', center:{x:432, y:222}, radius:14},
+                    {type:'circle', center:{x:548, y:223}, radius:20},
+                    {type:'circle', center:{x:179, y:225}, radius:16},
+                    {type:'circle', center:{x:112, y:232}, radius:12},
+                    {type:'circle', center:{x:290, y:234}, radius:17},
+                    {type:'circle', center:{x:489, y:234}, radius:20},
+                    {type:'circle', center:{x:358, y:260}, radius:20},
+                    {type:'circle', center:{x:148, y:263}, radius:12},
+                    {type:'circle', center:{x:55, y:268}, radius:15},
+                    {type:'circle', center:{x:428, y:269}, radius:13},
+                    {type:'circle', center:{x:103, y:278}, radius:14},
+                    {type:'circle', center:{x:212, y:280}, radius:18},
+                    {type:'circle', center:{x:295, y:282}, radius:11},
+                    {type:'circle', center:{x:549, y:283}, radius:19},
+                    {type:'circle', center:{x:498, y:288}, radius:10},
+                    {type:'circle', center:{x:169, y:305}, radius:11},
+                    {type:'circle', center:{x:460, y:324}, radius:16},
+                    {type:'circle', center:{x:338, y:327}, radius:15},
+                    {type:'circle', center:{x:406, y:329}, radius:18},
+                    {type:'circle', center:{x:119, y:331}, radius:13},
+                    {type:'circle', center:{x:260, y:336}, radius:19},
+                    {type:'circle', center:{x:52, y:337}, radius:19},
+                    {type:'circle', center:{x:559, y:337}, radius:10},
+                    {type:'circle', center:{x:195, y:344}, radius:14},
+                    {type:'circle', center:{x:505, y:360}, radius:10},
+                    {type:'circle', center:{x:438, y:371}, radius:11},
+                    {type:'circle', center:{x:161, y:377}, radius:12},
+                    {type:'circle', center:{x:107, y:381}, radius:14},
+                    {type:'circle', center:{x:306, y:384}, radius:16},
+                    {type:'circle', center:{x:564, y:386}, radius:19},
+                    {type:'circle', center:{x:243, y:388}, radius:12},
+                    {type:'circle', center:{x:382, y:389}, radius:12},
+                    {type:'circle', center:{x:57, y:404}, radius:17},
+                    {type:'circle', center:{x:202, y:416}, radius:17},
+                    {type:'circle', center:{x:456, y:421}, radius:15},
+                    {type:'circle', center:{x:523, y:423}, radius:11},
+                    {type:'circle', center:{x:145, y:426}, radius:12},
+                    {type:'circle', center:{x:277, y:433}, radius:16},
+                    {type:'circle', center:{x:25, y:445}, radius:10},
+                    {type:'circle', center:{x:413, y:446}, radius:14},
+                    {type:'circle', center:{x:348, y:448}, radius:10},
+                    {type:'circle', center:{x:569, y:450}, radius:13},
+                    {type:'circle', center:{x:497, y:461}, radius:14},
+                    {type:'circle', center:{x:69, y:462}, radius:16},
+                    {type:'circle', center:{x:118, y:465}, radius:11},
+                    {type:'circle', center:{x:244, y:474}, radius:15},
+                    {type:'circle', center:{x:312, y:476}, radius:15},
+                    {type:'circle', center:{x:378, y:478}, radius:11},
+                    {type:'circle', center:{x:195, y:482}, radius:12},
+                    {type:'circle', center:{x:26, y:499}, radius:11},
+                    {type:'circle', center:{x:112, y:512}, radius:15},
+                    {type:'circle', center:{x:436, y:519}, radius:17},
+                    {type:'circle', center:{x:535, y:519}, radius:17},
+                    {type:'circle', center:{x:165, y:522}, radius:12},
+                    {type:'circle', center:{x:259, y:529}, radius:12},
+                    {type:'circle', center:{x:382, y:532}, radius:17},
+                    {type:'circle', center:{x:30, y:543}, radius:10},
+                    {type:'circle', center:{x:205, y:548}, radius:12},
+                    {type:'circle', center:{x:317, y:554}, radius:15},
+                    {type:'circle', center:{x:143, y:561}, radius:10},
+                    {type:'circle', center:{x:71, y:564}, radius:14},
+                    {type:'circle', center:{x:486, y:573}, radius:16},
+                    {type:'circle', center:{x:551, y:573}, radius:11},
+                    {type:'circle', center:{x:415, y:574}, radius:10},
+                ],
+                smallPackedCloseSequence = [48, 42, 53, 67, 61, 52, 45, 41],
+                smallPackedFarSequence = [54, 9, 6, 63, 88, 24, 82, 32]
+
+                smallSpreadTargets = [
+                    {type:'circle', center:{x:347, y:49}, radius:18},
+                    {type:'circle', center:{x:192, y:61}, radius:14},
+                    {type:'circle', center:{x:560, y:67}, radius:10},
+                    {type:'circle', center:{x:89, y:91}, radius:11},
+                    {type:'circle', center:{x:464, y:120}, radius:17},
+                    {type:'circle', center:{x:220, y:177}, radius:18},
+                    {type:'circle', center:{x:371, y:215}, radius:16},
+                    {type:'circle', center:{x:46, y:240}, radius:15},
+                    {type:'circle', center:{x:554, y:244}, radius:19},
+                    {type:'circle', center:{x:157, y:321}, radius:12},
+                    {type:'circle', center:{x:462, y:322}, radius:15},
+                    {type:'circle', center:{x:31, y:396}, radius:12},
+                    {type:'circle', center:{x:572, y:408}, radius:12},
+                    {type:'circle', center:{x:322, y:421}, radius:15},
+                    {type:'circle', center:{x:204, y:422}, radius:19},
+                    {type:'circle', center:{x:468, y:453}, radius:11},
+                    {type:'circle', center:{x:181, y:542}, radius:16},
+                    {type:'circle', center:{x:40, y:547}, radius:17},
+                    {type:'circle', center:{x:558, y:570}, radius:19},
+                    {type:'circle', center:{x:335, y:573}, radius:12}
+                ],
+                smallSpreadCloseSequence = [4, 6, 10, 13, 15, 19, 16, 14],
+                smallSpreadFarSequence = [9, 18, 0, 14, 4, 16, 1, 12]
+
+                largePackedTargets = [
+                    {type:'circle', center:{x:52, y:48}, radius:37},
+                    {type:'circle', center:{x:150, y:56}, radius:31},
+                    {type:'circle', center:{x:485, y:56}, radius:25},
+                    {type:'circle', center:{x:315, y:65}, radius:30},
+                    {type:'circle', center:{x:564, y:70}, radius:25},
+                    {type:'circle', center:{x:455, y:146}, radius:32},
+                    {type:'circle', center:{x:85, y:150}, radius:32},
+                    {type:'circle', center:{x:346, y:154}, radius:30},
+                    {type:'circle', center:{x:556, y:156}, radius:31},
+                    {type:'circle', center:{x:200, y:170}, radius:32},
+                    {type:'circle', center:{x:42, y:233}, radius:27},
+                    {type:'circle', center:{x:518, y:257}, radius:39},
+                    {type:'circle', center:{x:323, y:275}, radius:27},
+                    {type:'circle', center:{x:105, y:296}, radius:25},
+                    {type:'circle', center:{x:425, y:303}, radius:28},
+                    {type:'circle', center:{x:198, y:327}, radius:39},
+                    {type:'circle', center:{x:295, y:354}, radius:25},
+                    {type:'circle', center:{x:560, y:357}, radius:29},
+                    {type:'circle', center:{x:114, y:393}, radius:25},
+                    {type:'circle', center:{x:398, y:401}, radius:29},
+                    {type:'circle', center:{x:314, y:434}, radius:25},
+                    {type:'circle', center:{x:487, y:434}, radius:29},
+                    {type:'circle', center:{x:50, y:447}, radius:28},
+                    {type:'circle', center:{x:200, y:457}, radius:33},
+                    {type:'circle', center:{x:564, y:473}, radius:25},
+                    {type:'circle', center:{x:89, y:537}, radius:37},
+                    {type:'circle', center:{x:504, y:547}, radius:25},
+                    {type:'circle', center:{x:195, y:552}, radius:25},
+                    {type:'circle', center:{x:352, y:553}, radius:34}
+                ],
+                largePackedCloseSequence = [9, 13, 18, 23, 16, 12, 7, 3],
+                largePackedFarSequence = [16, 2, 28, 6, 8, 0, 11, 25],
+
+                largeSpreadTargets = [
+                    {type:'circle', center:{x:38, y:47}, radius:27},
+                    {type:'circle', center:{x:329, y:64}, radius:31},
+                    {type:'circle', center:{x:171, y:80}, radius:27},
+                    {type:'circle', center:{x:523, y:90}, radius:39},
+                    {type:'circle', center:{x:75, y:179}, radius:30},
+                    {type:'circle', center:{x:236, y:196}, radius:25},
+                    {type:'circle', center:{x:378, y:208}, radius:37},
+                    {type:'circle', center:{x:528, y:256}, radius:25},
+                    {type:'circle', center:{x:54, y:329}, radius:27},
+                    {type:'circle', center:{x:240, y:367}, radius:40},
+                    {type:'circle', center:{x:411, y:375}, radius:34},
+                    {type:'circle', center:{x:57, y:469}, radius:33},
+                    {type:'circle', center:{x:536, y:483}, radius:35},
+                    {type:'circle', center:{x:218, y:530}, radius:30},
+                    {type:'circle', center:{x:362, y:534}, radius:27},
+                ],
+                largeSpreadCloseSequence = [5, 9, 10, 12, 14, 13, 11, 8, 4, 2],
+                largeSpreadFarSequence = [12, 1, 11, 3, 8, 0, 10, 3, 13, 2],
+
+                tests = [
+                    {
+                        id:0,
+                        bubbleCursor:true,
+                        targets:smallPackedTargets,
+                        sequence:smallPackedCloseSequence,
+                        prompt:'Next Test, using bubble cursor. Ready?'
+                    },
+                    {
+                        id:1,
+                        bubbleCursor:false,
+                        targets:smallPackedTargets,
+                        sequence:smallPackedCloseSequence,
+                        prompt:'Next Test, using normal pointer. Ready?'
+                    },
+                    {
+                        id:2,
+                        bubbleCursor:true,
+                        targets:smallPackedTargets,
+                        sequence:smallPackedFarSequence,
+                        prompt:'Next Test, using bubble cursor. Ready?'
+                    },
+                    {
+                        id:3,
+                        bubbleCursor:false,
+                        targets:smallPackedTargets,
+                        sequence:smallPackedFarSequence,
+                        prompt:'Next Test, using normal pointer. Ready?'
+                    },
+
+                    {
+                        id:4,
+                        bubbleCursor:true,
+                        targets:smallSpreadTargets,
+                        sequence:smallSpreadCloseSequence,
+                        prompt:'Next Test, using bubble cursor. Ready?'
+                    },
+                    {
+                        id:5,
+                        bubbleCursor:false,
+                        targets:smallSpreadTargets,
+                        sequence:smallSpreadCloseSequence,
+                        prompt:'Next Test, using normal pointer. Ready?'
+                    },
+                    {
+                        id:6,
+                        bubbleCursor:true,
+                        targets:smallSpreadTargets,
+                        sequence:smallSpreadFarSequence,
+                        prompt:'Next Test, using bubble cursor. Ready?'
+                    },
+                    {
+                        id:7,
+                        bubbleCursor:false,
+                        targets:smallSpreadTargets,
+                        sequence:smallSpreadFarSequence,
+                        prompt:'Next Test, using normal pointer. Ready?'
+                    },
+
+                    {
+                        id:8,
+                        bubbleCursor:true,
+                        targets:largePackedTargets,
+                        sequence:largePackedCloseSequence,
+                        prompt:'Next Test, using bubble cursor. Ready?'
+                    },
+                    {
+                        id:9,
+                        bubbleCursor:false,
+                        targets:largePackedTargets,
+                        sequence:largePackedCloseSequence,
+                        prompt:'Next Test, using normal pointer. Ready?'
+                    },
+                    {
+                        id:10,
+                        bubbleCursor:true,
+                        targets:largePackedTargets,
+                        sequence:largePackedFarSequence,
+                        prompt:'Next Test, using bubble cursor. Ready?'
+                    },
+                    {
+                        id:11,
+                        bubbleCursor:false,
+                        targets:largePackedTargets,
+                        sequence:largePackedFarSequence,
+                        prompt:'Next Test, using normal pointer. Ready?'
+                    },
+
+                    {
+                        id:12,
+                        bubbleCursor:true,
+                        targets:largeSpreadTargets,
+                        sequence:largeSpreadCloseSequence,
+                        prompt:'Next Test, using bubble cursor. Ready?'
+                    },
+                    {
+                        id:13,
+                        bubbleCursor:false,
+                        targets:largeSpreadTargets,
+                        sequence:largeSpreadCloseSequence,
+                        prompt:'Next Test, using normal pointer. Ready?'
+                    },
+                    {
+                        id:14,
+                        bubbleCursor:true,
+                        targets:largeSpreadTargets,
+                        sequence:largeSpreadFarSequence,
+                        prompt:'Next Test, using bubble cursor. Ready?'
+                    },
+                    {
+                        id:15,
+                        bubbleCursor:false,
+                        targets:largeSpreadTargets,
+                        sequence:largeSpreadFarSequence,
+                        prompt:'Next Test, using normal pointer. Ready?'
+                    }
+                ]
             ;
 
-            BubbleCursor.init(
-                {
-                    container:'canvasContainer',
-                    width:512,
-                    height:512
-                },
-                true,
-                [
-                    {type:'circle', center:{x:415, y:40}, radius:30},
-                    {type:'circle', center:{x:180, y:270}, radius:25},
-                    {type:'circle', center:{x:430, y:370}, radius:30},
-                    {type:'circle', center:{x:60, y:200}, radius:15},
-                    {type:'circle', center:{x:220, y:420}, radius:10},
-                    {type:'circle', center:{x:200, y:450}, radius:20},
-                    {type:'circle', center:{x:240, y:460}, radius:15},
-                    {type:'rectangle', topLeft:{x:80, y:380}, height:40, width:30},
-                    {type:'rectangle', topLeft:{x:100, y:100}, height:20, width:50},
-                    {type:'rectangle', topLeft:{x:350, y:320}, height:60, width:30},
-                    {type:'rectangle', topLeft:{x:220, y:310}, height:20, width:20},
-                    {type:'polygon', vertices:[{x:380, y:180}, {x:450, y:250}, {x:420, y:170}]},
-                    {type:'polygon', vertices:[{x:240, y:80}, {x:300, y:150}, {x:380, y:70}]},
-                    {type:'polygon', vertices:[{x:240, y:250}, {x:270, y:230}, {x:310, y:250}, {x:280, y:300}]}
-                ],
-                [11, 4, 8, 9, 10, 11, 6, 3],
-                {
-                    beforeStart:function() {
-                        alert('Click on the green shapes as quickly and as accurately as possible.')
-                        start = new Date().getTime();
-                    },
-                    hit:function() {
-                        dataPoint.duration = new Date().getTime() - start;
-                        data.push(dataPoint);
-                        dataPoint = {misses:0};
-                        start = new Date().getTime();
-                    },
-                    miss:function() {
-                        dataPoint.misses += 1
-                    },
-                    afterFinish:function() {
-                        var
-                            numPoints = data.length,
-                            totalTime = 0,
-                            totalMisses = 0
-                        ;
-                        for (var pointNo = -1; ++pointNo < numPoints;) {
-                            var point = data[pointNo];
-                            totalTime += point.duration;
-                            totalMisses += point.misses;
+            function showDialog(text, closeCallback) {
+                var dialog = $('#dialog');
+                $('#dialogText').text(text);
+                dialog.dialog({
+                    modal:true,
+                    buttons:{
+                        Ok:function() {
+                            dialog.dialog('close')
                         }
-                        alert(
-                          'Total Time: ' + totalTime + 'ms\n' +
-                          'Average Time per Target: ' + (totalTime / numPoints)  + 'ms\n' +
-                          'Total Misses: ' + totalMisses + '\n' +
-                          'Average Misses per Target: ' + (totalMisses / numPoints) + '\n'
+                    },
+                    close:function() {
+                        closeCallback && closeCallback()
+                    }
+                })
+            }
+
+            function startPractice() {
+                var
+                    variant1 = tests[7],
+                    variant2 = tests[6]
+                ;
+                showDialog(
+                    'Please familiarize yourself with the interface. Practice clicking on the green targets (normal pointer).',
+                    function() {
+                        BubbleCursor.init(
+                            canvasParams,
+                            variant1.bubbleCursor,
+                            variant1.targets,
+                            variant1.sequence,
+                            {afterFinish:function() {
+                                showDialog(
+                                    'Now, practice clicking on the green targets with the bubble cursor.',
+                                    BubbleCursor.init(
+                                        canvasParams,
+                                        variant2.bubbleCursor,
+                                        variant2.targets,
+                                        variant2.sequence,
+                                        {afterFinish:function() {startTest()}}
+                                    )
+                                )
+                            }}
                         );
                     }
+                );
+            }
+
+            function startTest() {
+                var
+                    data = new Array(16),
+                    remainingTests = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+                ;
+                function nextTest() {
+                    if (remainingTests.length) {
+                        var
+                            testIndex = Math.floor(remainingTests.length * Math.random()),
+                            test = tests[remainingTests.splice(Math.floor(remainingTests.length * Math.random()), 1)[0]],
+                            start,
+                            point = {misses:0},
+                            trials = [point]
+                        ;
+                        showDialog(
+                            test.prompt,
+                            function() {
+                                BubbleCursor.init(
+                                    canvasParams,
+                                    test.bubbleCursor,
+                                    test.targets,
+                                    test.sequence,
+                                    {
+                                        beforeStart:function() {
+                                            start = new Date().getTime();
+                                        },
+                                        hit:function() {
+                                            point.duration = new Date().getTime() - start;
+                                            trials.push(point);
+                                            point = {misses:0};
+                                            start = new Date().getTime();
+                                        },
+                                        miss:function() {
+                                            point.misses += 1
+                                        },
+                                        afterFinish:function() {
+                                            data[test.id] = trials;
+                                            nextTest();
+                                        }
+                                    }
+                                )
+                            }
+                        );
+                    } else {
+                        $.post('/results', {data:JSON.stringify(data)})
+                        showDialog("You've finished the test and may now leave this page. Thank you.")
+                        $('#canvasContainer').empty();
+                    }
                 }
-            );
+                nextTest();
+            }
+
+            startPractice();
         </script>
     </body>
 </html>
